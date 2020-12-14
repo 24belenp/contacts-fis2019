@@ -4,9 +4,8 @@
   "description": "APIcontacts",
   "main": "index.js",
   "repository": {
-    "type":"git",
+    "type": "git",
     "url": "https://github.com/24belenp/contacts-fis2019.git"
-
   },
   "homepage": "https://github.com/24belenp/contacts-fis2019",
   "scripts": {
@@ -16,7 +15,7 @@
   "author": "Belen Paredes",
   "license": "ISC",
   "dependencies": {
-    "express": "^4.17.1"
-   }
+    "express": "^4.17.1",
+    "nedb": "^1.8.0"
   }
-
+}
