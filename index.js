@@ -34,7 +34,7 @@ app.post(BASE_API_PATH + "/contacts",(req, res) => {
         console.log(Date() + "-" + err);
         res.sendStatus(500);
     } else {
-        rest.sendStatus(201);
+        res.sendStatus(201);
     }
     });
    
