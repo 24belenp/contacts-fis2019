@@ -14,7 +14,6 @@ app.use(bodyParser.json());
 var db= new DataStore({
     filename: DB_FILE_NAME,
     autoload: true
-
 });
 
 app.get("/", (req, res) => {
@@ -23,7 +22,16 @@ app.get("/", (req, res) => {
 
 app.get(BASE_API_PATH + "/contacts", (req, res) => {
     console.log(Date() + " - GET /contacts");
-    res.send([]);
+    db.find({},(err, contacs) =>{
+        if(err){
+            console.log(Date() + "-" + err);
+            res.sendStatus(500);
+        } else {
+            res.send(contacs);
+        }
+
+    });
+    
 });
 
 app.post(BASE_API_PATH + "/contacts",(req, res) => {
